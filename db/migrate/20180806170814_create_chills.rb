@@ -9,7 +9,8 @@ class CreateChills < ActiveRecord::Migration[5.2]
       t.text :location
       t.string :type
       t.integer :area
-      t.integeruser :chill_power
+      t.integer :chill_power
+      t.references :user, foreign_key: true
 
       t.timestamps
     end
