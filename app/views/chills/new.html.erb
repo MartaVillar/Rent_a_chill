@@ -1,0 +1,6 @@
+<%= simple_form_for (@chill) do |f| %>
+  <%= f.input :title, placeholder: "Pool" %>
+  <%= f.association :user %>
+  <%= f.label :location, "Enter address" %>
+  <%= f.submit "Create Chill"%>
+<% end  %>
