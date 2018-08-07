@@ -1,4 +1,5 @@
 class ChillsController < ApplicationController
+layout 'index_layout', :only => [:index]
 
   def index
     @chills = Chill.all
