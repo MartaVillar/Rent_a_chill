@@ -1,5 +1,5 @@
 class Booking < ApplicationRecord
   belongs_to :chill
   belongs_to :user
-  validates :datetime, presence: true
+  validates :date, presence: true
 end
