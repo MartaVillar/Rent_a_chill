@@ -10,10 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_06_141505) do
+ActiveRecord::Schema.define(version: 2018_08_06_170814) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.datetime "date"
+    t.bigint "chill_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chill_id"], name: "index_bookings_on_chill_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "chills", force: :cascade do |t|
+    t.string "title"
+    t.integer "capacity"
+    t.integer "price_per_hour"
+    t.boolean "available"
+    t.text "description"
+    t.text "location"
+    t.string "type"
+    t.integer "area"
+    t.integer "chill_power"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_chills_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -32,4 +58,7 @@ ActiveRecord::Schema.define(version: 2018_08_06_141505) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "chills"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "chills", "users"
 end
