@@ -5,6 +5,7 @@ class ChillsController < ApplicationController
 
   def create
     @chill = Chill.new(chill_params)
+    @chill.user = current_user
     if @chill.save!
       Chill.create(chill_params)
       redirect_to chills_path

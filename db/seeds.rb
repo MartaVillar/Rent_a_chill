@@ -43,3 +43,7 @@ puts "Creating users..."
 
 puts "Last Chill was #{Chill.last.title}!"
 
+["sabrina@rentachill.com", "marta@rentachill.com", "tiago@rentachill.com"].each do |email|
+  User.create(email: email, password: "password")
+end
+
