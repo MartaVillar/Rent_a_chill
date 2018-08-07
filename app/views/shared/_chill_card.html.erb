@@ -1,0 +1,18 @@
+
+<div class="container" id="cards_index"
+  <div class="row">
+    <% @chills.each do |chill| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url('https://source.unsplash.com/random');">
+          <div class="card-category"><%= chill.title %></div>
+          <div class="card-description">
+            <h3><%= chill.title %></h3>
+            <p><%= chill.description %></p>
+          </div>
+          <div class="image-cropper">
+            <%= image_tag "https://source.unsplash.com/user/erondu", class:"card-avatar" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
