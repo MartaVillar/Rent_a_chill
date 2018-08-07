@@ -5,12 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'date'
 
 User.destroy_all
 Chill.destroy_all
 
 
 puts "Creating users..."
+
+Booking.destroy_all
+Chill.destroy_all
 
 20.times do
   User.new(
@@ -23,8 +27,10 @@ puts "Creating users..."
   ).save!
   end
 
-  puts "Created#{User.count} users sucessfully!"
+  puts "Created #{User.count} users sucessfully!"
   puts "The last user created is #{User.last.name} born on #{User.last.birthday}"
+
+puts "Creating 20 chills..."
 
 20.times do
   Chill.new(
@@ -41,7 +47,19 @@ puts "Creating users..."
     ).save!
   end
 
-puts "Last Chill was #{Chill.last.title}!"
+  puts "Created #{Chill.count} chills sucessfully!"
+  puts "Last Chill was #{Chill.last.title}!"
+
+puts "Creating 20 bookings..."
+
+20.times do
+  Booking.new(
+    date: DateTime.new(2001,2,3,4,5,6),
+    chill: Chill.all.sample,
+    user: User.all.sample,
+  ).save!
+  end
+ puts "Created #{Booking.count} bookings sucessfully!"
 
 ["sabrina@rentachill.com", "marta@rentachill.com", "tiago@rentachill.com"].each do |email|
   User.create(email: email, password: "password")

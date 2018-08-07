@@ -1,4 +1,5 @@
 class ChillsController < ApplicationController
+
   def new
     @chill = Chill.new
   end
@@ -8,7 +9,7 @@ class ChillsController < ApplicationController
     @chill.user = current_user
     if @chill.save!
       Chill.create(chill_params)
-      redirect_to chills_path
+      redirect_to root_path
     else
       render :new
     end
@@ -19,4 +20,13 @@ class ChillsController < ApplicationController
   def chill_params
     params.require(:chill).permit(:title, :capacity, :price_per_hour, :location, :description, :category, :area, :chill_power, :user_id)
   end
+
+
+  def index
+   @chills = Chill.all
+  end
+
+
+
+
 end
