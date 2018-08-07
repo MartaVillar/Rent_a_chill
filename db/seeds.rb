@@ -54,9 +54,8 @@ puts "Creating 20 bookings..."
 20.times do
   Booking.new(
     date: DateTime.new(2001,2,3,4,5,6),
-    chill_id: rand(1..20),
-    date: Faker::Time.between(50.days.ago, Date.today, :afternoon),
-    user_id: rand(1..20),
+    chill: Chill.all.sample,
+    user: User.all.sample,
   ).save!
   end
 
