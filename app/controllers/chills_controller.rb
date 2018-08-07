@@ -1,5 +1,9 @@
 class ChillsController < ApplicationController
 
+  def index
+    @chills = Chill.all
+  end
+
   def new
     @chill = Chill.new
   end
@@ -20,13 +24,6 @@ class ChillsController < ApplicationController
   def chill_params
     params.require(:chill).permit(:title, :capacity, :price_per_hour, :location, :description, :category, :area, :chill_power, :user_id)
   end
-
-
-  def index
-   @chills = Chill.all
-  end
-
-
 
 
 end
