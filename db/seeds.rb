@@ -28,7 +28,7 @@ Chill.destroy_all
   end
 
   puts "Created #{User.count} users sucessfully!"
-
+  puts "The last user created is #{User.last.name} born on #{User.last.birthday}"
 
 puts "Creating 20 chills..."
 
