@@ -48,6 +48,7 @@ puts "Creating 20 chills..."
   end
 
   puts "Created #{Chill.count} chills sucessfully!"
+  puts "Last Chill was #{Chill.last.title}!"
 
 puts "Creating 20 bookings..."
 
