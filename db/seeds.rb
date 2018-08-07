@@ -7,9 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'date'
 
-puts "Creating 20 users..."
+User.destroy_all
+Chill.destroy_all
+
+
+puts "Creating users..."
 
 Booking.destroy_all
+Chill.destroy_all
 
 20.times do
   User.new(
@@ -22,10 +27,29 @@ Booking.destroy_all
   ).save!
   end
 
-  puts "Created#{User.count} users sucessfully!"
-  puts "The last user created is #{User.last.name} born on #{User.last.birthday}"
+  puts "Created #{User.count} users sucessfully!"
 
-puts "Creating 20 bookins..."
+
+puts "Creating 20 chills..."
+
+20.times do
+  Chill.new(
+    title: Faker::AquaTeenHungerForce.character,
+    capacity: Faker::Types.rb_integer(1,20),
+    price_per_hour: Faker::Types.rb_integer(1,1000),
+    available: Faker::Boolean.boolean,
+    description: Faker::HarryPotter.quote,
+    location: Faker::Address.full_address,
+    category: Faker::Space.planet,
+    area: Faker::Types.rb_integer(0,50),
+    chill_power: Faker::Types.rb_integer(1,5),
+    user: User.all.sample
+    ).save!
+  end
+
+  puts "Created #{Chill.count} chills sucessfully!"
+
+puts "Creating 20 bookings..."
 
 20.times do
   Booking.new(
@@ -36,5 +60,4 @@ puts "Creating 20 bookins..."
   ).save!
   end
 
-  puts "Created#{Booking.count} users sucessfully!"
-  puts "The last booking created is #{Booking.last}"
+  puts "Created #{Booking.count} bookings sucessfully!"
