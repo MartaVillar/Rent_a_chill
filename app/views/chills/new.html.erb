@@ -1,0 +1,15 @@
+<div class= form>
+  <h1>Create a Chill</h1>
+  <%= simple_form_for (@chill) do |f| %>
+  <%= f.input :title, placeholder: "Large Garden Pool" %>
+  <%= f.input :location, placeholder: "282 Kevin Brook, Imogeneborough, CA 58517" %>
+  <%= f.input :capacity, collection: 1..50 %>
+  <%= f.input :price_per_hour, placeholder: "10" %>
+  <%= f.input :available, collection: [[true, true], [false, false]] %>
+  <%= f.input :description, placeholder: "Come chill and barbeque..."%>
+  <%= f.input :category, placeholder: "Small garden pool 20m2"%>
+  <%= f.input :area, placeholder: 50 %>
+  <%= f.input :chill_power, collection: 1..5%>
+  <%= f.submit "Create Chill"%>
+  <% end  %>
+</div>

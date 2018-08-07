@@ -59,5 +59,9 @@ puts "Creating 20 bookings..."
     user: User.all.sample,
   ).save!
   end
+ puts "Created #{Booking.count} bookings sucessfully!"
 
-  puts "Created #{Booking.count} bookings sucessfully!"
+["sabrina@rentachill.com", "marta@rentachill.com", "tiago@rentachill.com"].each do |email|
+  User.create(email: email, password: "password")
+end
+
