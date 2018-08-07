@@ -6,8 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
+Chill.destroy_all
 
-puts "Creating 20 users..."
+
+puts "Creating users..."
 
 20.times do
   User.new(
@@ -22,3 +25,21 @@ puts "Creating 20 users..."
 
   puts "Created#{User.count} users sucessfully!"
   puts "The last user created is #{User.last.name} born on #{User.last.birthday}"
+
+20.times do
+  Chill.new(
+    title: Faker::AquaTeenHungerForce.character,
+    capacity: Faker::Types.rb_integer(1,20),
+    price_per_hour: Faker::Types.rb_integer(1,1000),
+    available: Faker::Boolean.boolean,
+    description: Faker::HarryPotter.quote,
+    location: Faker::Address.full_address,
+    category: Faker::Space.planet,
+    area: Faker::Types.rb_integer(0,50),
+    chill_power: Faker::Types.rb_integer(1,5),
+    user: User.all.sample
+    ).save!
+  end
+
+puts "Last Chill was #{Chill.last.title}!"
+
