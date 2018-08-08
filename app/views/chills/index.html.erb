@@ -1,9 +1,36 @@
 <div class="banner">
   <div class="banner-content">
-    <h1>Are you <strong>hot?</strong></h1>
-    <div class="banner-buttons">
-      <a href="" class="btn">Rent'a Chill!</a>
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-xs-12">
+
+          <h1 class="title">Are you
+            <strong>hot?</strong>
+          </h1>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="banner-buttons">
+          <div class="col-xs-12">
+            <a href="#cards_index" class="btn btn-block">Browse Chills!</a>
+          </div>
+          <div class="col-xs-12">
+
+              <%= link_to "Login", new_user_session_path, class: "btn btn-block" %>
+          </div>
+          <div class="col-xs-12">
+
+            <%= link_to "Sign up", new_user_registration_path, class: "btn btn-block" %>
+
+          </div>
+        </div>
+      </div>
+
     </div>
+
   </div>
 </div>
 
