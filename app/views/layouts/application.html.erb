@@ -7,13 +7,17 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
-  </head>
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
-  </body>
-</html>
+    <%#= stylesheet_pack_tag 'application', media: 'all' %>
+      <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+    </head>
+    <body>
+      <!-- <% if user_signed_in? %> -->
+        <%= render 'shared/header' %>
+      <!-- <% end %> -->
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+      <%= javascript_include_tag 'application' %>
+      <%= javascript_pack_tag 'application' %>
+    </body>
+  </html>
