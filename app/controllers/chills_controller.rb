@@ -1,5 +1,6 @@
 class ChillsController < ApplicationController
 layout 'index_layout', :only => [:index]
+skip_before_action :authenticate_user!, only: :index
 
   def index
     @chills = Chill.all
