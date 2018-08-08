@@ -1,0 +1,132 @@
+.show-wrapper {
+  flex: 1 1 30%;
+  margin: 100px;
+  border-radius: 1px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  background-color: white;
+  position: relative;
+}
+
+.show-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  padding-bottom: 30px;
+  margin-top: -20px;
+}
+
+// #show-price {
+//   position: absolute;
+//   top: 100px;
+//   right: 40px;
+// }
+
+#show-description {
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.show-photo {
+  object-fit: cover;
+  width: 100%;
+  height: 400px;
+}
+
+.fa-heart {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: white;
+  opacity: 0.8;
+  font-size: 40px;
+}
+
+.show-location {
+  font-family: "Raleway", "Helvetica", "sans-serif";
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+
+}
+
+.show-location a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.show-location a:hover {
+    opacity: 1;
+    text-decoration: none;
+    color: #999999;
+}
+
+
+.descriptor {
+  display: flex;
+  margin: 0, auto;
+}
+
+.show-content {
+  display: flex;
+  align-items: center;
+  margin: 50px;
+  flex-direction: column;
+  position: relative;
+}
+
+.btn-medium {
+  color: #999999;
+  border: 1px solid #999999;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: lighter;
+  opacity: 0.6;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.btn-medium:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #999999;
+}
+
+
+// // .show container {
+// //   display: flex;
+// //   flex-direction: column;
+// //   justify-content: space-around;
+// //   max-width: 300px;
+// //   background-image: url("https://source.unsplash.com/random");
+// // }
+
+// // .cardshow {
+// //   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+// //   color: white;
+// //   width: 100px !important;
+// // }
+
+// // .card-categoryshow {
+// //   position: absolute;
+// //   top: 10px;
+// //   left: 10px;
+// //   font-size: 15px;
+// //   text-transform: uppercase;
+// // }
+// // .card-descriptionshow {
+// //   position: absolute;
+// //   bottom: 10px;
+// //   left: 10px;
+// // }
+// // .card-descriptionshow h2 {
+// //   font-size: 24px;
+// // }
+// // .card-descriptionshow p {
+// //   font-size: 14px;
+// //   opacity: 0.7;
+// //   font-weight: lighter;
+// // }
+
