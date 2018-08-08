@@ -20,6 +20,7 @@ puts "Creating 20 users..."
     name: Faker::Name.name ,
     birthday: Faker::Date.birthday(18, 65),
     description: Faker::Community.quotes,
+    interests: Faker::Community.quotes,
     phone: Faker::PhoneNumber.phone_number,
     password: (0...8).map { (65 + rand(26)).chr }.join
   ).save!
