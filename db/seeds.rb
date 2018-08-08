@@ -31,7 +31,7 @@ puts "Creating 20 users..."
 puts "Creating 20 chills..."
 20.times do
   Chill.new(
-    title: Faker::AquaTeenHungerForce.character,
+    title: Faker::UmphreysMcgee.song,
     capacity: Faker::Types.rb_integer(1,20),
     price_per_hour: Faker::Types.rb_integer(1,1000),
     available: Faker::Boolean.boolean,
