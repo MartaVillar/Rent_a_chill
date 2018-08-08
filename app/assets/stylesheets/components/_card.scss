@@ -6,6 +6,8 @@
   color: white;
   position: relative;
   margin: 10px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
 .image-cropper {
@@ -30,7 +32,7 @@
   position: absolute;
   top: 10px;
   left: 10px;
-  font-size: 15px;
+  font-size: 25px;
   text-transform: uppercase;
 }
 
@@ -38,10 +40,14 @@
   position: absolute;
   bottom: 10px;
   left: 10px;
+
+  i {
+    color: #FEF851;
+  }
 }
 
 .card-description h2 {
-  font-size: 24px;
+  font-size: 15px;
 }
 
 .card-description p {

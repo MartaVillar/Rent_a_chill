@@ -1,15 +1,15 @@
 .banner {
-  background-image: linear-gradient(-225deg, rgba(20, 196, 255, 0.6) 0%, rgba(20, 196, 255, 0.6) 50%), url(image_path("banner.jpg"));
+  background-image: linear-gradient(-225deg, rgba(20, 196, 255, 0.6) 0%, rgba(20, 196, 255, 0.6) 50%), url("image_path("banner.jpg")");
   height: 100vh;
   background-size: cover !important;
 }
 
 .container-fluid {
   display: flex;
-  flex-direction:column;
-  justify-content:space-between;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
   align-items: center;
-
 }
 
 .banner-content {
@@ -25,9 +25,9 @@
 .btn {
   color: black;
   text-decoration: none;
-  padding: 15px 100px;
+  padding: 15px 80px;
   font-weight: bold;
-  background-color: #ff5e3a;
+  background-color: #FEF851;
   opacity: 1;
   border-radius: 50px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
