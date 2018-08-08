@@ -10,7 +10,7 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %>
       <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
     </head>
-    <body style="background-color: #25637C;">
+    <body style="background-color: #53C7F0;">
       <% if user_signed_in? %>
         <%= render 'shared/header' %>
         <p class="notice"><%= notice %></p>
@@ -22,7 +22,7 @@
       <% if user_signed_in? %>
       <%= render 'shared/footer' %>
       <% end %>
-      
+
       <%= javascript_include_tag 'application' %>
       <%= javascript_pack_tag 'application' %>
     </body>
