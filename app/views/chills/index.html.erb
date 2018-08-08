@@ -1,3 +1,4 @@
+<% unless user_signed_in?  %>
 <div class="banner">
   <div class="banner-content">
     <div class="container-fluid">
@@ -33,5 +34,6 @@
 
   </div>
 </div>
+<% end %>
 
 <%= render 'shared/chill_card', chill: @chill %>
