@@ -20,6 +20,7 @@ puts "Creating 20 users..."
     name: Faker::Name.name ,
     birthday: Faker::Date.birthday(18, 65),
     description: Faker::Community.quotes,
+    interests: Faker::Community.quotes,
     phone: Faker::PhoneNumber.phone_number,
     password: (0...8).map { (65 + rand(26)).chr }.join
   ).save!
@@ -35,7 +36,7 @@ puts "Creating 20 chills..."
     capacity: Faker::Types.rb_integer(1,20),
     price_per_hour: Faker::Types.rb_integer(1,1000),
     available: Faker::Boolean.boolean,
-    description: Faker::HarryPotter.quote,
+    descript"Well I may be a genius, but I'm not a lesbian.ion: Faker::HarryPotter.quote,
     location: Faker::Address.full_address,
     category: Faker::Space.planet,
     area: Faker::Types.rb_integer(0,50),
