@@ -10,4 +10,10 @@ Rails.application.routes.draw do
 
   resources :chills, :only => [:show]
 
+  # booking a chill
+
+  get 'chills/book/:id', to: 'chills#book', as: :book
+
+
+
 end
