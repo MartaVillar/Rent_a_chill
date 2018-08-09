@@ -9,14 +9,16 @@
   <% end %>
 </div>
 
-<div class="search-container">
+<form class="search-container">
   <div class="search-icon-btn">
     <i class="fa fa-search"></i>
   </div>
+
   <div class="search-input">
-  <%= form_tag root_path, method: :get do %>
-  <%= text_field_tag :query, params[:query], class: "search-bar", placeholder: "Search..." %>
-  <% end %>
-    </div>
+    <input type="text" class="search-bar" name="query" placeholder="Search...">
+    <button type="submit" action="index" hidden="true"> </button>
   </div>
+</form>
 </div>
+
+
