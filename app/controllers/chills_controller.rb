@@ -20,10 +20,14 @@ skip_before_action :authenticate_user!, only: :index
     end
   end
 
+  def show
+    @chill = Chill.find(params[:id])
+  end
+
   private
 
   def chill_params
-    params.require(:chill).permit(:title, :capacity, :price_per_hour, :location, :description, :category, :area, :chill_power, :user_id)
+    params.require(:chill).permit(:title, :capacity, :price_per_hour, :location, :description, :category, :user_id)
   end
 
 

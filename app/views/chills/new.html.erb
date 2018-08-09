@@ -11,8 +11,6 @@
         <%= f.input :available, collection: [[true, true], [false, false]] %>
         <%= f.input :description, placeholder: "Come chill and barbeque..."%>
         <%= f.input :category, placeholder: "Small garden pool 20m2"%>
-        <%= f.input :area, placeholder: 50 %>
-        <%= f.input :chill_power, collection: 1..5%>
       </div>
       <div class="form-actions">
         <%= f.button :submit,"Create Chill"%>
