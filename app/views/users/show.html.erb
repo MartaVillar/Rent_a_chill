@@ -1,17 +1,44 @@
 
+<div id="user_profile">
+  <div class="avatar-user"><img src="#"></div>
+  <div id="username"><%= @user.name %></div>
 
+<% if @user == current_user %>
+  <div class="ensemble">
+    <%= link_to edit_user_registration_path(@user) do %>
+      <i class="fa fa-edit"></i>
+      <% end %>
+  <a class="hidden-xs dropdown-toggle footer-rent-link" id="footer-rent-menu" data-toggle="dropdown" href="">Edit</a>
+  </div>
+<% end %>
 
-<div class="card-profile">
-  <div class="about-me">
-    <h2> About me </h2>
+  <div class="card-profile">
+      <h2> About me </h2>
+      <p><%= @user.description %></p>
+  </div>
+
+  <div class="card-profile">
+    <h2> Interests </h2>
     <p><%= @user.interests %></p>
   </div>
+
+  <ul>
+    <li>
+      <div class="icons">
+        <i class="fa fa-camera"></i>
+      </div>
+      <a class="profile-options" href="#">Edit Profile</a>
+    </li>
+      <div class="icons">
+        <i class="fa fa-clock-o"></i>
+      </div>
+      <a class="profile-options" href="#">Previous Chills</a>
+    </li>
+    <li>
+      <div class="icons">
+        <i class="fa fa-calendar"></i>
+      </div><a class="profile-options" href="#">Events</a>
+    </li>
+  </ul>
 </div>
 
-<div class="card-profile">
-  <div class="interests">
-    <h2>Interests</h2>
-  </div>
-</div>
-
-<p><button>Contact</button></p>

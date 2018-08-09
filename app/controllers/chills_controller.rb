@@ -1,16 +1,5 @@
 class ChillsController < ApplicationController
 skip_before_action :authenticate_user!, only: :index
-
-  # include PgSearch
-  # multisearchable against: [ :title, :syllabus ]
-
-  # pg_search_scope :search_by_title_and_syllabus,
-  #   against: [ :title,  ],
-  #   using: {
-  #     tsearch: { prefix: true } # <-- now `superman batm` will return something!
-  #   }
-
-
   def index
     @chills = Chill.all
     if params[:query].present?
@@ -49,6 +38,11 @@ skip_before_action :authenticate_user!, only: :index
   def show
     @chill = Chill.find(params[:id])
   end
+
+  def book
+    @chill = Chill.find(params[:id])
+  end
+
 
   private
 
