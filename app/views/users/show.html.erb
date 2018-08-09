@@ -1,12 +1,44 @@
 
+<div id="user_profile">
+  <div class="avatar-user"><img src="#"></div>
+  <div id="username"><%= @user.name %></div>
 
-
-<div class="card-profile">
-  <div class="about-me">
+  <div class="card-profile">
     <h2> About me </h2>
     <p><%= @user.interests %></p>
   </div>
+
+  <div class="card-profile">
+    <h2> Interests </h2>
+    <p><%= @user.interests %></p>
+  </div>
+
+  <ul>
+    <li>
+      <div class="icons">
+        <i class="fa fa-camera"></i>
+      </div>
+      <a class="profile-options" href="#">Edit Profile</a>
+    </li>
+      <div class="icons">
+        <i class="fa fa-clock-o"></i>
+      </div>
+      <a class="profile-options" href="#">Previous Chills</a>
+    </li>
+    <li>
+      <div class="icons">
+        <i class="fa fa-calendar"></i>
+      </div><a class="profile-options" href="#">Events</a>
+    </li>
+ <!--    <li>
+      <div class="icons">
+        <i class="fa fa-gear"></i>
+      </div><a href="#">Setting</a>
+    </li> -->
+  </ul>
 </div>
+<!--
+
 
 <div class="card-profile">
   <div class="interests">
@@ -14,4 +46,4 @@
   </div>
 </div>
 
-<p><button>Contact</button></p>
+<p><button>Contact</button></p> -->
