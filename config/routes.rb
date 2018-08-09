@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get 'chills/new', to: 'chills#new'
   post 'chills', to: 'chills#create'
 
+  get 'chills/show/:id', to: 'chills#show'
+
 end

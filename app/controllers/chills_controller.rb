@@ -20,6 +20,10 @@ skip_before_action :authenticate_user!, only: :index
     end
   end
 
+  def show
+    @chill = Chill.find(params[:id])
+  end
+
   private
 
   def chill_params
