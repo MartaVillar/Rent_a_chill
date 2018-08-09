@@ -1,4 +1,6 @@
 // Import page-specific CSS files here.
 @import "home";
-@import "users_show";
-@import "chills_show";
+
+// pages indexes
+@import "users/index";
+@import "chills/index";
