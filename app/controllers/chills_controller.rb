@@ -39,10 +39,6 @@ skip_before_action :authenticate_user!, only: :index
     @chill = Chill.find(params[:id])
   end
 
-  def book
-    @chill = Chill.find(params[:id])
-  end
-
 
   private
 
