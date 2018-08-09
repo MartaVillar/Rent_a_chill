@@ -1,9 +1,10 @@
 .wrapper-chill-photo {
   height: 25vh;
   display:flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  position: relative;
+}
 
-
-
-
+.wrapper-chill-details {
+  color: white;
 }

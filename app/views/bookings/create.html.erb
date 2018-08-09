@@ -1,0 +1,30 @@
+<h1>Sucess!</h1>
+<p>Your booked a chill</p>
+<div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url('https://source.unsplash.com/random');">
+      <div class="card-category"><h1>BOOKED!</h1></div>
+      <div class="card-description">
+        <i class="fas fa-map-marker-alt"></i> <%=@chill.location%>
+        <p><%= @chill.description %></p>
+      </div>
+      <div class="image-cropper raised">
+        <%= image_tag "https://source.unsplash.com/user/erondu", class:"card-avatar" %>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1>Details</h1>
+          <p>For: <%= @booking.date  %></p>
+            <p>For: <%= @booking.chill.title  %></p>
+              <p>For: <%= @booking.chill.capacity  %></p>
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+</div>

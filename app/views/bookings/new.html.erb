@@ -1,0 +1,40 @@
+<div class="wrapper-chill-photo container-fluid" style="background-image: url('https://www.rd.com/wp-content/uploads/2018/05/shutterstock_254911351-760x506.jpg')" ;=";">
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h3><%=@chill.title %></h3>
+      <div class="row">
+        <div class="col-xs-12">
+          <i class="fas fa-map-marker-alt"></i>
+          <%= @chill.location %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="image-cropper">
+    <%= image_tag "https://source.unsplash.com/user/erondu", class:"card-avatar" %>
+  </div>
+</div>
+</div>
+
+<div class="wrapper-chill-details">
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-6 col-lg-6">
+      <h2>Choose a date</h2>
+
+      <%= simple_form_for [@chill, @booking] do |f| %>
+        <%= f.input :date %>
+        <%= f.submit "Confirm booking", class: "btn btn-primary" %>
+      <% end %>
+
+
+
+
+    <i class="fas fa-users"></i>
+      How many to chill?
+    </div>
+  </div>
+</div>
+</div>
