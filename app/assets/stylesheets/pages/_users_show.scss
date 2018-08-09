@@ -1,37 +1,99 @@
+#username {
+  color: white;
+  margin: 10px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
 .card-profile {
-  height: 150px;
-  color: gray;
+  color: white;
   position: relative;
   margin: 5px;
-  padding-left: 10px;
   border-radius: 10px;
-  border: 1px solid black;
+  border: 1px solid gray;
+  padding: 0px 0px 0px 0px;
 }
 
 .card-profile h2 {
-  font-size: 20px;
+  font-size: 15px;
+  padding: 10px;
+  padding-bottom: 5px;
+  margin: 0;
+  // position: absolute;
 }
 
-a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
+.card-profile p {
+  font-size: 10px;
+  padding: 10px;
+  padding-bottom: 10px;
+  margin: 0;
 }
 
-button {
-  border-radius: 10px;
-  border: 1px solid black;
-  padding: relative;
-  padding-left: 10px;
-  color: gray;
-  background-color: white;
+.avatar-user {
+  width: 50px;
+  border-radius: 50%;
   text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 20px;
-  margin: 5px;
 }
 
-button:hover, a:hover {
-    opacity: 0.7;
+.profile-options {
+  height: 60px;
+  line-height: 60px;
+}
+
+// a {
+//   text-decoration: none;
+//   font-size: 22px;
+//   color: black;
+// }
+
+// button {
+//   border-radius: 10px;
+//   border: 1px solid black;
+//   padding: relative;
+//   padding-left: 10px;
+//   color: gray;
+//   background-color: white;
+//   text-align: center;
+//   cursor: pointer;
+//   width: 100%;
+//   font-size: 20px;
+//   margin: 5px;
+// }
+
+// button:hover, a:hover {
+//     opacity: 0.7;
+// }
+
+ ul {
+  margin:0px;
+  padding:0px;
+  // position:absolute;
+  bottom:0;
+}
+
+li {
+  list-style-type:none;
+  clear:both;
+  overflow:auto;
+  margin-bottom:1px;
+}
+
+li i{
+  position:relative;
+  top:15px;-webkit-transition:1s ease;
+  -moz-transition:1s ease;
+  transition:1s ease;
+}
+
+ .icons{
+  display:block;
+  float:left;
+  width:60px;
+  height:60px;
+  text-align:center;
+  font-size:1.5em;
+  color:#fff;
+  -webkit-box-shadow:
+  inset 0px 0px 10px rgba(0,0,0,0.2);
 }
