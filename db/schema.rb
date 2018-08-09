@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2018_08_09_121558) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,8 +35,6 @@ ActiveRecord::Schema.define(version: 2018_08_09_121558) do
     t.text "description"
     t.text "location"
     t.string "category"
-    t.integer "area"
-    t.integer "chill_power"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

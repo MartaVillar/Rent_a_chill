@@ -1,4 +1,7 @@
 
+<div id="user_profile">
+  <div class="avatar-user"><img src="#"></div>
+  <div id="username"><%= @user.name %></div>
 
 <% if @user == current_user %>
   <div class="ensemble">
@@ -9,16 +12,33 @@
   </div>
 <% end %>
 
-<div class="card-profile">
-  <div class="about-me">
-    <h2> About me </h2>
-   <!--  <%= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill %> -->
+  <div class="card-profile">
+      <h2> About me </h2>
+      <p><%= @user.description %></p>
+  </div>
+
+  <div class="card-profile">
+    <h2> Interests </h2>
     <p><%= @user.interests %></p>
   </div>
+
+  <ul>
+    <li>
+      <div class="icons">
+        <i class="fa fa-camera"></i>
+      </div>
+      <a class="profile-options" href="#">Edit Profile</a>
+    </li>
+      <div class="icons">
+        <i class="fa fa-clock-o"></i>
+      </div>
+      <a class="profile-options" href="#">Previous Chills</a>
+    </li>
+    <li>
+      <div class="icons">
+        <i class="fa fa-calendar"></i>
+      </div><a class="profile-options" href="#">Events</a>
+    </li>
+  </ul>
 </div>
 
-<div class="card-profile">
-  <div class="interests">
-    <h2>Interests</h2>
-  </div>
-</div>
