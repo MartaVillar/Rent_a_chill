@@ -16,6 +16,8 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
+gem 'geocoder'
+gem 'pg_search'
 gem 'faker'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary'
