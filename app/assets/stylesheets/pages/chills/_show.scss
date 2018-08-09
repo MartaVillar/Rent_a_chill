@@ -1,6 +1,6 @@
 .show-wrapper {
   flex: 1 1 30%;
-  margin: 100px;
+  margin: 5%;
   border-radius: 1px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
@@ -73,7 +73,7 @@
 .show-content {
   display: flex;
   align-items: center;
-  margin: 50px;
+  margin: 10%;
   flex-direction: column;
   position: relative;
 }
