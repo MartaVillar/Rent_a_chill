@@ -9,14 +9,15 @@
 
   <div class="show-content">
     <div class="show-title">
-      <h2><%= @chill.title%></h2>
-      <h3><%= @chill.price_per_hour %> €</h3>
+      <h4><%= @chill.title%></h4>
+      <p><%= @chill.price_per_hour %>€</p>
     </div>
     <p id= "show-description"><%= @chill.description %></p>
 
     <div class="show-location">
       <a href="#"><i class="fa fa-map-marker-alt"></i> Location</a>
       <p><%= @chill.location %></p>
+      <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=15&size=400x300&sensor=false&maptype=roadmap&markers=color:red|#{@chill.location}&key=#{ENV['GOOGLE_API_SERVER_KEY']}" %>
     </div>
 
 
