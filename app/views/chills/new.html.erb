@@ -10,7 +10,7 @@
         <%= f.input :price_per_hour, placeholder: "10" %>
         <%= f.input :available, collection: [[true, true], [false, false]] %>
         <%= f.input :description, placeholder: "Come chill and barbeque..."%>
-        <%= f.input :category, placeholder: "Small garden pool 20m2"%>
+        <%= f.input :category, collection: ['pool', 'tub', 'hose', 'sprinkler', 'inflatable pool', 'other'] %>
       </div>
       <div class="form-actions">
         <%= f.button :submit,"Create Chill"%>
