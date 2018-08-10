@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-xs-12">
-      <h1>Create a Chill</h1>
+      <h1 id="titlenew">Create a Chill</h1>
       <%= simple_form_for (@chill) do |f| %>
       <div class="form-inputs">
         <%= f.input :title, placeholder: "Large Garden Pool" %>
@@ -12,7 +12,7 @@
         <%= f.input :description, placeholder: "Come chill and barbeque..."%>
         <%= f.input :category, collection: ['pool', 'tub', 'hose', 'sprinkler', 'inflatable pool', 'other'] %>
       </div>
-      <div class="form-actions">
+      <div class="new-form-actions">
         <%= f.button :submit,"Create Chill"%>
       </div>
       <% end  %>
