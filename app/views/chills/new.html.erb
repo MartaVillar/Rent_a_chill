@@ -3,7 +3,7 @@
     <div class="col-xs-12">
       <h1 id="titlenew">Create a Chill</h1>
       <%= simple_form_for (@chill) do |f| %>
-      <div class="form-inputs">
+      <div class="new-form-inputs">
         <%= f.input :title, placeholder: "Large Garden Pool" %>
         <%= f.input :location, placeholder: "282 Kevin Brook, Imogeneborough, CA 58517" %>
         <%= f.input :capacity, collection: 1..50 %>
