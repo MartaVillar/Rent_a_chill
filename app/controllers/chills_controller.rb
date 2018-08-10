@@ -27,7 +27,7 @@ skip_before_action :authenticate_user!, only: :index
   def create
     @chill = Chill.new(chill_params)
     @chill.user = current_user
-    if @chill.save!
+    if @chill.save
       Chill.create(chill_params)
       redirect_to root_path
     else
