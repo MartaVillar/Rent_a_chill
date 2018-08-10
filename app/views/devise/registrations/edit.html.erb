@@ -1,50 +1,67 @@
-<h2> Edit your profile  </h2>
+<div class="container text-center">
+  <div class="row">
+    <div class="col profile-photo">
+        <%   if @user.photo? %>
+        <% image_options = { height: 150, width: 150, crop: :fill } %>
+          <%= cl_image_tag @user.photo, image_options %>
+        <% else  %>
+          <%= image_tag("https://api.adorable.io/avatars/150/#{@user.name}@adorable.io.png", size:'150x150') %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <h2>
+    Edit your profile
+  </h2>
+
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
 
-     <div class="card-profile">
-          <h2><%= f.input :name %></h2>
-      </div>
+    <div class="card-profile">
+      <h2><%= f.input :name %></h2>
+    </div>
 
-      <div class="card-profile">
-          <h2><%= f.input :photo %></h2>
-          <%= f.input :photo_cache, as: :hidden %>
-      </div>
+    <div class="card-profile">
+      <h2><%= f.input :photo %></h2>
+      <%= f.input :photo_cache, as: :hidden %>
+    </div>
 
-     <div class="card-profile">
+    <div class="card-profile">
       <h2><%= f.input :description, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %></h2>
-      </h2>
-    </div>
-
-    <div class="card-profile">
-      <h2><%= f.input :interests, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %></h2>
-    </div>
-
-    <div class="card-profile">
-      <h2><%= f.input :email, required: true, autofocus: true %></h2>
-    </div>
-
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-    <% end %>
-
-    <div class="card-profile">
-      <h2><%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %></h2>
-      <h2><%= f.input :password_confirmation, required: false %></h2>
-      <h2><%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %></h2>
-    </div>
+    </h2>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Update"%>
+  <div class="card-profile">
+    <h2><%= f.input :interests, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %></h2>
   </div>
+
+  <div class="card-profile">
+    <h2><%= f.input :email, required: true, autofocus: true %></h2>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <p>Currently waiting confirmation for:
+      <%= resource.unconfirmed_email %></p>
   <% end %>
 
-  <h2>Cancel my account</h2>
+  <div class="card-profile">
+    <h2><%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %></h2>
+    <h2><%= f.input :password_confirmation, required: false %></h2>
+    <h2><%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %></h2>
+  </div>
+</div>
 
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<div class="form-actions">
+  <%= f.button :submit, "Update"%>
+</div>
+<% end %>
+
+<h2>Cancel my account</h2>
+
+<p>Unhappy?
+<%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>

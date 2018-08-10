@@ -28,6 +28,13 @@
   width: auto;
 }
 
+
+.avatar-large {
+height: 150;
+width: 150;
+margin: 0 auto 0 -25%; //centers the image
+}
+
 .card-category {
   position: absolute;
   top: 10px;
