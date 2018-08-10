@@ -19,6 +19,11 @@
             <div class="col-xs-12">
               <%= link_to "Sign up", new_user_registration_path, class: "btn btn-block" %>
             </div>
+
+            <div class="card-profile">
+              <h2><%= f.input :photo %></h2>
+              <%= f.input :photo_cache, as: :hidden %>
+            </div>
           </div>
         </div>
 

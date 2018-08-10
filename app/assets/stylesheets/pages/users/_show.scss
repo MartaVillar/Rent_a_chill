@@ -1,13 +1,13 @@
 #username {
-  color: white;
+  color: solid-gray;
   margin: 10px;
   font-weight: bold;
   text-align: center;
   padding-bottom: 20px;
+  font-size: 25px;
 }
 
 .card-profile {
-  color: white;
   position: relative;
   margin: 5px;
   border-radius: 10px;
@@ -41,29 +41,6 @@
   line-height: 60px;
 }
 
-// a {
-//   text-decoration: none;
-//   font-size: 22px;
-//   color: black;
-// }
-
-// button {
-//   border-radius: 10px;
-//   border: 1px solid black;
-//   padding: relative;
-//   padding-left: 10px;
-//   color: gray;
-//   background-color: white;
-//   text-align: center;
-//   cursor: pointer;
-//   width: 100%;
-//   font-size: 20px;
-//   margin: 5px;
-// }
-
-// button:hover, a:hover {
-//     opacity: 0.7;
-// }
 
  ul {
   margin:0px;
@@ -96,4 +73,8 @@ li i{
   color:#fff;
   -webkit-box-shadow:
   inset 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.fa-edit {
+  color: gray;
 }

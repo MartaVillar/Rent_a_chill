@@ -23,9 +23,16 @@
 
 .card-avatar {
   display: inline;
-  margin: 0 auto 0 -25%; //centers the image
+  margin: 0 auto 0; //centers the image
   height: 100%;
   width: auto;
+}
+
+
+.avatar-large {
+height: 150;
+width: 150;
+margin: 0 auto 0 -25%; //centers the image
 }
 
 .card-category {
