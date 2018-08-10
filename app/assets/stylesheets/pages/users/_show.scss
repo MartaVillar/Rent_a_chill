@@ -1,13 +1,13 @@
 #username {
-  color: white;
+  color: solid-gray;
   margin: 10px;
   font-weight: bold;
   text-align: center;
   padding-bottom: 20px;
+  font-size: 25px;
 }
 
 .card-profile {
-  color: white;
   position: relative;
   margin: 5px;
   border-radius: 10px;
@@ -73,4 +73,8 @@ li i{
   color:#fff;
   -webkit-box-shadow:
   inset 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.fa-edit {
+  color: gray;
 }
