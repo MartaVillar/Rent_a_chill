@@ -4,7 +4,14 @@
 
 <!--   <img class="show-photo" src="https://api.adorable.io/avatars/150/#{@chill.name}@adorable.io.png" alt="">
  -->  <%= cl_image_tag @chill.photo, class:"show-photo" %>
-
+ <div class="avatar-chill">
+   <% if @chill.user.photo? %>
+   <% image_options = { height: 50, width: 50, crop: :fill } %>
+   <%= cl_image_tag @chill.user.photo, image_options %>
+   <% else %>
+   <%= image_tag "https://api.adorable.io/avatars/150/#{@chill.user.name.slice(0,4)}@adorable.io.png", class:"card-avatar" %>
+   <% end %>
+ </div>
 
 
   <div class="show-content">
