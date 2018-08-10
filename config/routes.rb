@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'chills/new', to: 'chills#new'
   post 'chills', to: 'chills#create'
 
-  resources :chills, :only => [:show] do
+  resources :chills, :only => [:show, :edit] do
     resources :bookings, only: [:new, :create]
   end
 

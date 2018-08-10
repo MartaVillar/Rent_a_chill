@@ -39,11 +39,17 @@ skip_before_action :authenticate_user!, only: :index
     @chill = Chill.find(params[:id])
   end
 
+  def update
+    @chill = Chill.find(params[:id])
+    @chill.update(chill_params)
+    redirect_to chill_path(@chill)
+  end
+
 
   private
 
   def chill_params
-    params.require(:chill).permit(:title, :capacity, :price_per_hour, :location, :description, :category, :user_id)
+    params.require(:chill).permit(:title, :capacity, :price_per_hour, :location, :description, :category, :user_id, :photo, :photo_cache)
   end
 
 

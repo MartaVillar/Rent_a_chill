@@ -2,7 +2,10 @@
 
   <a href="#"><i class="fa fa-heart"></i></a>
 
-  <img class="show-photo" src="https://www.rd.com/wp-content/uploads/2018/05/shutterstock_254911351-760x506.jpg" alt="">
+<!--   <img class="show-photo" src="https://api.adorable.io/avatars/150/#{@chill.name}@adorable.io.png" alt="">
+ -->  <%= cl_image_tag @chill.photo, class:"show-photo" %>
+
+
 
   <div class="show-content">
     <div class="show-title">
@@ -17,9 +20,8 @@
     </div>
 
 
-
-    <%=link_to "Get this chill", new_chill_booking_path(@chill), class: "btn btn-block" %>
-
-
+    <% if @user != current_user %>
+      <%=link_to "Get this chill", new_chill_booking_path(@chill), class: "btn btn-block" %>
+    <% end %>
   </div>
 </div>
