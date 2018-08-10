@@ -35,9 +35,9 @@ DESCRIPTION = ["Olympic-sized swimming pool",
   "American Standard Cambridge 5-Feet Bath Tub", "2 L worth of ice cubes",
   "Magnum, Haagen Dazs, Ben & Jerry's ice-cream!!"]
 
-User.destroy_all
-Chill.destroy_all
 Booking.destroy_all
+Chill.destroy_all
+User.destroy_all
 
 # Seeding Users
 puts "Creating 20 users..."
