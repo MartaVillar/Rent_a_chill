@@ -1,16 +1,24 @@
-
-<div id="user_profile">
-  <div class="avatar-user"><img src="#"></div>
+<div class="container text-center">
+  <div id="user_profile">
+    <div class="col profile-photo">
+      <%   if @user.photo? %>
+        <% image_options = { height: 150, width: 150, crop: :fill } %>
+        <%= cl_image_tag @user.photo, image_options %>
+      <% else  %>
+        <%= image_tag("https://api.adorable.io/avatars/150/#{@user.name}@adorable.io.png", size:'150x150') %>
+      <% end %>
+    </div>
+  </div>
   <div id="username"><%= @user.name %></div>
 
-<% if @user == current_user %>
-  <div class="ensemble">
-    <%= link_to edit_user_registration_path(@user) do %>
-      <i class="fa fa-edit"></i>
-      <% end %>
-  <a class="hidden-xs dropdown-toggle footer-rent-link" id="footer-rent-menu" data-toggle="dropdown" href="">Edit</a>
-  </div>
-<% end %>
+  <% if @user == current_user %>
+    <div class="ensemble">
+      <%= link_to edit_user_registration_path(@user) do %>
+        <i class="fa fa-edit"></i>
+        <% end %>
+    <a class="hidden-xs dropdown-toggle footer-rent-link" id="footer-rent-menu" data-toggle="dropdown" href="">Edit</a>
+    </div>
+  <% end %>
 
   <div class="card-profile">
       <h2> About me </h2>
@@ -22,23 +30,9 @@
     <p><%= @user.interests %></p>
   </div>
 
-  <ul>
-    <li>
-      <div class="icons">
-        <i class="fa fa-camera"></i>
-      </div>
-      <a class="profile-options" href="#">Edit Profile</a>
-    </li>
-      <div class="icons">
-        <i class="fa fa-clock-o"></i>
-      </div>
-      <a class="profile-options" href="#">Previous Chills</a>
-    </li>
-    <li>
-      <div class="icons">
-        <i class="fa fa-calendar"></i>
-      </div><a class="profile-options" href="#">Events</a>
-    </li>
-  </ul>
+  <div class="card-profile">
+    <h2> My last Chills </h2>
+    <p><%= @user.chills %></p>
+  </div>
 </div>
 
